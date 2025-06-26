@@ -1,17 +1,15 @@
+import './App.css'
 
-import './App.css';
+import React from 'react';
 
-function App() {
-
-  const url = 'https://via.placeholder.com/150'
+function app() {
 
   return (
-    
-    <div className="App">
-    <h1>Olá React</h1>
-    <img src={url} alt='minha-imagem'/>
+    <div>
+      <h1>Hello Alisson!</h1>
     </div>
   )
 }
 
-export default App;
+export default app
+
