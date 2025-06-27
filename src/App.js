@@ -4,6 +4,7 @@ import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
 import Teste from './components/Teste';
 import Frase from './components/Frase';
+import List from './components/List'
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
       foto="https://via.placeholder.com/150"
       />
       <Teste python = 'Python' php = 'php'/>
+      <List />
+
     </div>
   )
 }
