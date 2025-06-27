@@ -1,8 +1,10 @@
-function Teste(props) {
+function Teste({python, php}) {
 
     return (
         <div>
-            <p>Pode demorar, mas eu {props.nome} vou conseguir</p>
+            <h1>Aprendendo Cursos</h1>
+            <p>python: {python}</p>
+            <p>php {php}</p>
         </div>
     )
 }
