@@ -4,7 +4,7 @@ import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
 import Teste from './components/Teste';
 import Frase from './components/Frase';
-import List from './components/List'
+import List from './components/List';
 
 
 function App() {
