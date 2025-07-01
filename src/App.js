@@ -1,5 +1,7 @@
 import './App.css'
-import Eventos from './components/Eventos'
+import Evento from './components/Evento'
+import Form from './components/Form'
+
 
 
 function App() {
@@ -7,8 +9,9 @@ function App() {
   return (
     <div className='App'>
       <h1>Eventos DOM</h1>
-      <Eventos numero = '1'/>
-      <Eventos numero = '2'/>
+      <Evento numero='1'/>
+      <Evento numero='2'/>
+      <Form />
       
     </div>
   )
