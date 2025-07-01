@@ -1,28 +1,15 @@
 import './App.css'
-
-import SayMyName from './components/SayMyName';
-import Pessoa from './components/Pessoa';
-import Teste from './components/Teste';
-import Frase from './components/Frase';
-import List from './components/List';
+import Eventos from './components/Eventos'
 
 
 function App() {
+
   return (
     <div className='App'>
-      <Frase />
-      <h1>Hello Alisson!</h1>
-      <SayMyName nome="Alisson" />
-      <SayMyName nome="João" />
-      <Pessoa
-      nome="Rodrigo"
-      idade="28"
-      profissao="Desenvolvedo Web"
-      foto="https://via.placeholder.com/150"
-      />
-      <Teste python = 'Python' php = 'php'/>
-      <List />
-
+      <h1>Eventos DOM</h1>
+      <Eventos numero = '1'/>
+      <Eventos numero = '2'/>
+      
     </div>
   )
 }
