@@ -1,12 +1,12 @@
-import styles from './Frase.module.css'
+import Frase from './Frase'
 
-function Nome(props) {
+function Nome({nome, idade}) {
 
     return(
         <div>
-            <h1 className={styles.fraseContainer}>Vamos pra revisão</h1>
-            <p>Nome: {props.nome}</p>
-            <p>Idade: {props.idade}</p>
+            <h2>Nome</h2>
+            <p>Meu nome é {nome} e idade é {idade}.</p>
+            <Frase />
         </div>
     )
 }

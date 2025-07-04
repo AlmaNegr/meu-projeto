@@ -5,10 +5,8 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Eventos DOM</h1>
+      <h2>Revisão</h2>
       <Evento />
-      
-    
     </div>
   )
 }

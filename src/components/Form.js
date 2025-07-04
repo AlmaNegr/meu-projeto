@@ -1,37 +1,30 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function Form({aleatorio}) {
 
+function Form() {
     function cadastrarUsuario(e) {
-        e.preventDefault()
-        console.log(`Usuário ${name} foi cadastrado com a senha ${password}`)
-
+        e.preventDefault();
+        console.log("Usuário cadastrado com sucesso!");
     }
 
-    const [name, setName] = useState('Fulano')
-    const [password, setPassword] = useState()
+    const [name, setName] = useState('Nome Padrão');
 
     return(
-        <>
-        <h1>Meu cadastro</h1>
-        <form onSubmit={cadastrarUsuario}>
-            <div>
-                <label htmlFor="name">Nome:</label>
-                <input type="text"
-                 placeholder="Digite seu nome"
-                  name="name" id="name" 
-                  onChange={(e) => setName(e.target.value)} value={name}></input>
-            </div>
-            <div>
-                <label htmlFor="password">Senha:</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha"  onChange={(e) => setPassword(e.target.value)} value={password}></input>
-            </div>
-            <div>
-                <button type="submit">Cadastrar</button>
-            </div>
-        </form>
-        </>
+        <div className="form-container">
+            <h2>Formulário</h2>
+            <form onSubmit={cadastrarUsuario}>
+                <div>
+                    <label htmlFor="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome" onChange={(e) => setName(e.target.value)} value={name}></input>
+                </div>
+                <div>
+                    <label htmlFor="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha"></input>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     )
 }
 
-export default Form
+export default Form;
