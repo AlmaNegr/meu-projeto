@@ -5,9 +5,8 @@ body {
 }
 
 h1 {
-  background-color: green;
-  border-radius: 10px;
-  border: 1px solid blue;
-  padding: 10px;
-  color: white;
+ background-color: blue;
+ padding: 5px;
+ border-radius: 5px;
+ color: white;
 }

@@ -1,17 +1,14 @@
 
-
-function Evento({numero}) {
+function Evento() {
     function meuEvento() {
-        
-        console.log(`Você chamou o número ${numero}`)
+        console.log('Meu evento.')
     }
 
     return(
-        <>
-        <h1>Testando Evento</h1>
-        <p>Clique para disparar um evento</p>
-        <button onClick={meuEvento}>Cique aqui</button>
-        </>
+        <div>
+            <h1>Testando eventos</h1>
+            <button onClick={meuEvento}>Clique aqui</button>
+        </div>
     )
 }
 
