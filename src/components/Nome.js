@@ -1,17 +1,12 @@
-import { useState } from "react"
+import styles from './Frase.module.css'
 
-function Nome() {
-    const [nome, setNome] = useState("Visitante")
-
-
-    function mudaNome() {
-        setNome("Alisson")
-    }
+function Nome(props) {
 
     return(
         <div>
-            <h2>Olá, {nome}!</h2>
-            <button onClick={mudaNome}>Disparar</button>
+            <h1 className={styles.fraseContainer}>Vamos pra revisão</h1>
+            <p>Nome: {props.nome}</p>
+            <p>Idade: {props.idade}</p>
         </div>
     )
 }

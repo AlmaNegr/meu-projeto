@@ -1,16 +1,17 @@
-import styles from './Frase.module.css'
+
 
 function Evento({numero}) {
-
     function meuEvento() {
-        console.log(`Opa, você clicou ${numero}`)
+        
+        console.log(`Você chamou o número ${numero}`)
     }
 
     return(
-        <div>
-            <p className={styles.fraseContainer}>Clique para disparar um evento!</p>
-            <input type="button" onClick={meuEvento} value="Disparar"></input>
-        </div>
+        <>
+        <h1>Testando Evento</h1>
+        <p>Clique para disparar um evento</p>
+        <button onClick={meuEvento}>Cique aqui</button>
+        </>
     )
 }
 
