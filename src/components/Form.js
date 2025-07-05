@@ -4,10 +4,11 @@ import { useState } from "react";
 function Form() {
     function cadastrarUsuario(e) {
         e.preventDefault();
-        console.log("Usuário cadastrado com sucesso!");
+        console.log(`O ${name} foi cadastrado com a senha ${senha}`);
     }
 
     const [name, setName] = useState('Nome Padrão');
+    const [senha, setSenha] = useState('senha padrao')
 
     return(
         <div className="form-container">
@@ -19,7 +20,7 @@ function Form() {
                 </div>
                 <div>
                     <label htmlFor="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha"></input>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" onChange={(e) => setSenha(e.target.value)} value={senha}></input>
                 </div>
                 <button type="submit">Enviar</button>
             </form>

@@ -1,12 +1,13 @@
 import './App.css'
-import Evento from './components/Evento'
+import Form from './components/Form'
+import styles from './components/Frase.module.css'
 
 function App() {
 
   return (
     <div className='App'>
-      <h2>Revisão</h2>
-      <Evento />
+      <h2 className={styles.fraseContainer}>Revisão</h2>
+      <Form />
     </div>
   )
 }
