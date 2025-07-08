@@ -1,12 +1,8 @@
-import Frase from './Frase'
-
-function Nome({nome, idade}) {
+function Nome(props) {
 
     return(
         <div>
-            <h2>Nome</h2>
-            <p>Meu nome é {nome} e idade é {idade}.</p>
-            <Frase />
+            <button onClick={props.event}>{props.text}</button>
         </div>
     )
 }

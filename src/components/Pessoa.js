@@ -1,27 +1,37 @@
-import { useState } from "react";
+import {useState} from 'react'
 
 function Pessoa() {
-    function cadastrarUsuario(e) {
+
+    const [email, setEmail] = useState()
+    const [userEmail, setUserEmail] = useState()
+
+    function enviarEmail(e) {
         e.preventDefault()
-        console.log('Usuario cadastrado.')
-        setNome('')
+        setUserEmail(email)
     }
 
-    const [nome, setNome] = useState('')
+    function limparEmail(e) {
+        e.preventDefault()
+        setUserEmail('')
+    }
+
+    
+
 
     return(
         <div>
-            <h2>useState</h2>
-            <form onSubmit={cadastrarUsuario}>
-                <div>
-                    <label htmlFor="name">Nome: </label>
-                    <input type="text" placeholder="Digite seu nome" id="name" name="name" onChange={(e) => setNome(e.target.value)} value={nome}></input>
-                </div>
-                <button type="submit">Enviar</button>
-
+            <h2>Renderizando o seu email</h2>
+            <form>
+                <input type='email' placeholder='Digite seu email' onChange={(e) => setEmail(e.target.value)} value={email}></input>
+                <button type='submit' onClick={enviarEmail}>Enviar email</button>
+                {userEmail && (
+                    <div>
+                        <p>O email do usuário é: {userEmail}</p>
+                        <button onClick={limparEmail}>Limpar Email</button>
+                    </div>
+                )}
             </form>
         </div>
-
     )
 }
 
