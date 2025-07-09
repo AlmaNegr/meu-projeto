@@ -1,16 +1,17 @@
 import './App.css'
-import Outralista from './components/Outralista'
 import Teste from './components/Teste'
+import Frase from './components/Frase'
 
 
 function App() {
-  const itens = ['React', 'Vue', 'Angular']
+  
+  const lista = ['Python', 'Javascript', 'Java']
 
   return (
     <div className='App'>
-      <h2>Renderização de listas</h2>
-      <Outralista itens={itens}/>
+      <h2>Revisão</h2>
       <Teste />
+      <Frase itens={lista}/>
     </div>
   )
 }

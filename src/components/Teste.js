@@ -1,34 +1,56 @@
 import {useState} from 'react'
 
 function Teste() {
-    function enviarFormulario(e) {
+    function cadastrarUsuario(e) {
         e.preventDefault()
-        console.log(`Usuário cadastrado.`)
-        console.log(nome)
+        console.log(`Usuário ${nome} cadastrado.`)
+        setNome(nome)
+    }
+    
+    function limparNome(e) {
+        e.preventDefault()
+        setNome('')
+
     }
 
     function limparEmail(e) {
         e.preventDefault()
-        setNome('')
+        setEmail('')
     }
 
-    const [nome, setNome] = useState('')
-    
-    return(
-        <div>
-            <h2>Meu Formulário</h2>
-            <form>
-                <input type="text" placeholder="Digite seu nome" onChange={(e) => setNome(e.target.value)}></input>
-                <button type="submit" onClick={enviarFormulario} value={nome}>Enviar Formulário</button>
-                {nome && (
-                    <div>
-                        <p>O nome do usuário é : {nome}</p>
-                        <button onClick={limparEmail}>Limpar Email</button>
-                    </div>
-                ) }
+    const [nome, setNome] = useState()
+    const [email, setEmail] = useState()
 
-            </form>
-        </div>
+    return(
+        <>
+        <h2>Formulário</h2>
+        <form onSubmit={cadastrarUsuario}>
+            <div>
+                <label htmlFor="nome">Nome: </label>
+                <input type="texte" placeholder="Digite seu nome" onChange={(e) => setNome(e.target.value)} value={nome}></input>
+            </div>
+            <di>
+                <label htmlFor="email">E-mail: </label>
+                <input type="email" placeholder="Digite seu e-mail" onChange={(e) => setEmail(e.target.value)} value={email}></input>
+            </di>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+            {nome && (
+                <div>
+                    <p>O nome cadastrado foi {nome}.</p>
+                    <button onClick={limparNome}>Limpar Nome</button>
+                </div>
+            )}
+            {email && (
+                <div>
+                    <p>O email cadastrado foi {email}</p>
+                    <button onClick={limparEmail}>Limpar Email</button>
+                </div>
+            )}
+            
+        </form>
+        </>
     )
 }
 
