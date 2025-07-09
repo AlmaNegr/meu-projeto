@@ -1,17 +1,17 @@
 import './App.css'
-import Teste from './components/Teste'
-import Frase from './components/Frase'
-
+import { useState } from 'react'
+import SeuNome from './components/SeuNome'
+import Saudacao from './components/Saudacao'
 
 function App() {
-  
-  const lista = ['Python', 'Javascript', 'Java']
+
+  const [nome, setNome] = useState()
 
   return (
     <div className='App'>
-      <h2>Revisão</h2>
-      <Teste />
-      <Frase itens={lista}/>
+      <h2>State Lift</h2>
+      <SeuNome setNome={setNome}/>
+      <Saudacao nome={nome} />
     </div>
   )
 }
