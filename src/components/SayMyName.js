@@ -1,17 +1,11 @@
-function SayMyName({nome, email}) {
+function SayMyName({nome}) {
     function gerarSaudacao(algumNome) {
         return `Olá, ${algumNome}, tudo bem?`
     }
-
-    function gerarEmail(algumEmail) {
-        return `Seu Email é ${algumEmail}`
-    }
-
     return(
-        <>
-        {nome && <p>{gerarSaudacao(nome)}</p>}
-        {email && <p>{gerarEmail(email)}</p>}
-        </>
+        <div>
+            <p>{gerarSaudacao(nome)}</p>
+        </div>
     )
 }
 
