@@ -4,15 +4,9 @@ import styles from '../Design.module.css'
 function Navbar() {
     return(
         <nav>
-            <li>
-                <Link to="/">Início</Link>
-            </li>
-            <li>
-                <Link to="/sobre">Sobre</Link>
-            </li>
-            <li>
-                <Link to="/contato">Contato</Link>
-            </li>
+            <Link className={styles.espaco} to="/">Home</Link>
+            <Link className={styles.espaco} to="/contato">Contato</Link>
+            <Link className={styles.espaco} to="/sobre">Sobre</Link>
         </nav>
     )
 }

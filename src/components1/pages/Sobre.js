@@ -1,5 +1,9 @@
 function Sobre() {
-    return <h1>Página Sobre</h1>
+    return(
+        <div>
+            <h1>Página Sobre</h1>
+        </div>
+    )
 }
 
 export default Sobre
