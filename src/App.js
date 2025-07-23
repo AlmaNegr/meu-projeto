@@ -1,24 +1,24 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Home from "./components1/pages/Home"
-import Company from "./components1/pages/Company"
-import Contato from "./components1/pages/Contato"
-import NewProject from "./components1/pages/NewProject"
-import Navbar from "./components1/layout/Navbar"
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import List from "./components/List";
+import SeuNome from "./components/SeuNome";
+import Container from "./components/Container"
 
 function App() {
-
   return(
-    
-      <Router>
-        <Navbar />
+    <Router>
+      <nav>
+        <ul>
+          <Link to="/lista">Lista</Link>
+          <Link to="/seunome">Nome</Link>
+        </ul>
+      </nav>
+      <Container>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/company" element={<Company />}></Route>
-          <Route path="/contato" element={<Contato />}></Route>
-          <Route path="/novoprojeto" element={<NewProject />}></Route>
+          <Route path="/lista" element={<List />}></Route>
+          <Route path="/seunome" element={<SeuNome />}></Route>
         </Routes>
-      </Router>
-  
+      </Container>
+    </Router>
   )
 }
 

@@ -1,9 +1,13 @@
-function Nome(props) {
+
+
+function Nome({event, text}) {
 
     return(
         <div>
-            <button onClick={props.event}>{props.text}</button>
+            <h2>...</h2>
+            <button onClick={event}>{text}</button>
         </div>
+
     )
 }
 
