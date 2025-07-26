@@ -1,10 +1,7 @@
-
-
 function Button(props) {
-
     return(
         <div>
-            <button onClick={props.event}>{props.text}</button>
+            <button onClick={props.evento}>{props.texto}</button>
         </div>
     )
 }

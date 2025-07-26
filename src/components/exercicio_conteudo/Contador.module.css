@@ -1,0 +1,19 @@
+.container {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.container button {
+    width: 80%;
+}

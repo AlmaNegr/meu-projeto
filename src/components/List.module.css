@@ -1,0 +1,17 @@
+.lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: blue;
+}
+
+.lista button {
+    background-color: yellow;
+}
+
+.lista p {
+    background-color: red;
+    color: white;
+}

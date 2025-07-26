@@ -1,24 +1,18 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import List from "./components/List";
-import SeuNome from "./components/SeuNome";
-import Container from "./components/Container"
+import Contador from "./components/exercicio_conteudo/Contador"
+import Formulario from "./components/exercicio_conteudo/Formulario"
+import Idade from "./components/exercicio_conteudo/Idade"
+import Cadastro from "./components/exercicio_conteudo/Cadastro"
+
 
 function App() {
+
   return(
-    <Router>
-      <nav>
-        <ul>
-          <Link to="/lista">Lista</Link>
-          <Link to="/seunome">Nome</Link>
-        </ul>
-      </nav>
-      <Container>
-        <Routes>
-          <Route path="/lista" element={<List />}></Route>
-          <Route path="/seunome" element={<SeuNome />}></Route>
-        </Routes>
-      </Container>
-    </Router>
+    <div>
+      <Contador />
+      <Formulario />
+      <Idade />
+      <Cadastro />
+    </div>
   )
 }
 
