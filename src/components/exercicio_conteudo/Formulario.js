@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./Formulario.module.css"
 
 function Formulario() {
 
@@ -9,7 +10,8 @@ function Formulario() {
     }
 
     return(
-        <div>
+        <div className={styles.form}>
+            <h2>Formulário</h2>
          <input type="text"
             name="nome"
             placeholder="nome"
